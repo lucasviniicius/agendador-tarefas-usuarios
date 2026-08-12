@@ -28,10 +28,10 @@ public class Usuario implements UserDetails {
     private String senha;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-    private List<com.usuarios.infrastructure.entity.Endereco> endereco;
+    private List<com.usuarios.infrastructure.entity.Endereco> enderecos;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-    private List<com.usuarios.infrastructure.entity.Telefone> telefone;
+    private List<com.usuarios.infrastructure.entity.Telefone> telefones;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
